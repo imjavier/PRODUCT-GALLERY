@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+     
+  </head>
+
+  <body>
+   
+    <div> 
+      <form  id="log" method="POST">
+        <h2>ROKUZ JEANS ADMIN</h2>
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="identification" name="identification" required>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input class='dedito'type="password" id="password" name="password" required>
+        </div>
+        <div id="divLogin">
+          <button onclick="getInput()" type="button" >
+            login
+          </button>
+        </div>
+      </form>
+    </div>
+
+     
+<script src="../js/login.js"></script>
+  </body>
+</html>

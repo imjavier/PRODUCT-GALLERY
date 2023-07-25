@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>   
+    <script src="https://kit.fontawesome.com/92181cd2c7.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin editor</title>   
+    <link rel="stylesheet" type="text/css"   href="../css/sesion.css"/>
+
+</head>
+<body>
+    <div class="modal-overlay">
+        <div class="modal row">
+            <a href="#" onclick="shutModal();" >
+                <i class="fa-solid fa-circle-xmark" style="color: #000000; font-size:20px;"  ></i>
+            </a>
+            <h2>INSERTANDO DATOS DEL NUEVO PRODUCTO</h2>
+          <form class="form-add"></form>  
+     
+         <div class="row w-100 flex-col"> 
+            <label for="" class="aling-text">referencia del producto</label>          
+            <input id="input-ref" type="text" placeholder="" class="input-add"><br>
+         </div>
+         <div class="row w-100 flex-col"> 
+            <label for="" class="aling-text">url de la imagen del producto</label>          
+            <input id="input-img" type="text" placeholder="" class="input-add"><br>
+         </div> 
+         <div class="row  w-100 flex-col"> 
+            <label for="" class="aling-text">nombre del producto</label>          
+            <input id="input-name" type="text" placeholder="" class="input-add"><br>
+         </div>
+         <div class="row w-100 flex-col"> 
+            <label for="" class="aling-text">talla del producto</label>          
+            <input  id="input-size" type="text" placeholder="" class="input-add"><br>
+         </div>
+         <div class="row w-100 flex-col"> 
+            <label for="" class="aling-text">precio del producto</label>          
+            <input id="input-price" type="text" placeholder="" class="input-add"><br>
+         </div>    
+            <button onclick="addProduct()" class="btn btn-add btn-add2">AGREGAR</button>
+            </form>
+
+        
+
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header">
+            
+            <h6 class="">Listado de productos</h6>
+            
+
+            <a href="#" onclick="showModal();" id="new-producto"  class="btn btn-sm btn-add">AGREGAR PRODUCTO
+                <i class="fa-solid fa-plus"></i>
+            </a>
+           
+        </div>
+        <div class="card-body">
+            <div class="table-responsive " >
+                <div id="product_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="users" width="100%" cellspacing="0" role="grid" aria-describedby="users_info" style="width: 100%;">
+                    <thead>
+                        <tr role="row">
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 38.2px;">Referencia</th>
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1"  style="width: 40.2px;">Imagen</th>
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1"  style="width: 68.2px;">Nombre</th>
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1"  style="width: 101.2px;">Talla</th>
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1"  style="width: 63.2px;">Precio</th>
+                            <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1"  style="width: 52.2px;">Actions</th></tr>
+                    </thead>
+                    <tfoot>
+                        <tr><th rowspan="1" colspan="1">Referencia</th><th rowspan="1" colspan="1">imagen</th><th rowspan="1" colspan="1">nombre</th><th rowspan="1" colspan="1">talla</th><th rowspan="1" colspan="1">precio</th><th rowspan="1" colspan="1">Actions</th></tr>
+                    </tfoot>
+                    <tbody id="tabla_prductos">
+                        
+                         
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/sesion.js"></script>
+</body>
+
+</html>
